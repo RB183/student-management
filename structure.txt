@@ -1,0 +1,54 @@
+student-management-system/
+│
+├── backend/                        # Node.js + Express.js API
+│   ├── config/                     # Database and storage configurations
+│   │   ├── db.js                   # MongoDB / Mongoose connection
+│   │   └── cloudinary.js           # Optional Cloudinary or local upload setup
+│   ├── controllers/                # Request handlers (Business Logic)
+│   │   ├── authController.js       # Admin login, validation, and JWT generation
+│   │   └── studentController.js    # CRUD logic, image handling, search/filters
+│   ├── middleware/                 # Route guards and file interceptors
+│   │   ├── authMiddleware.js       # Verifies JWT tokens to protect routes
+│   │   └── uploadMiddleware.js     # Multer config (validates .jpg/.png & <2MB limit)
+│   ├── models/                     # Mongoose schemas
+│   │   ├── Admin.js                # Admin schema (Email, Hashed Password)
+│   │   └── Student.js              # Student schema (Image URL, Name, Status, etc.)
+│   ├── routes/                     # Express Router files
+│   │   ├── authRoutes.js           # Routes for /api/auth/login and logout
+│   │   └── studentRoutes.js        # Protected CRUD routes for /api/students
+│   ├── uploads/                    # Local storage folder for profile images
+│   ├── .env                        # PORT, MONGO_URI, JWT_SECRET
+│   ├── package.json
+│   └── server.js                   # App entry point & middleware initialization
+│
+├── frontend/                       # React.js App
+│   ├── public/
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── assets/                 # Default profile images & brand assets
+│   │   ├── components/             # Reusable UI presentation elements
+│   │   │   ├── common/             # Global visual pieces
+│   │   │   │   ├── Sidebar.jsx     # Navigation for Dashboard & Student List
+│   │   │   │   ├── Navbar.jsx      # Top bar with Welcome Message & Logout
+│   │   │   │   └── ProtectedRoute.jsx # Blocks unauthenticated users from dashboard
+│   │   │   └── students/           # Student-specific UI elements
+│   │   │       ├── StudentRow.jsx  # Individual table row with Actions
+│   │   │       ├── FilterBar.jsx   # Search inputs and Course/Status filters
+│   │   │       └── StudentForm.jsx # Reusable form for both Add and Edit actions
+│   │   ├── context/                # Global State Management
+│   │   │   └── AuthContext.jsx     # Stores admin JWT state, Login/Logout actions
+│   │   ├── pages/                  # Main route views
+│   │   │   ├── Login.jsx           # Responsive Login page with validation
+│   │   │   ├── Dashboard.jsx       # Status summary grid (Total, Active, Inactive)
+│   │   │   └── StudentList.jsx     # Main table view with search & pagination
+│   │   ├── services/               # API Communication layer
+│   │   │   ├── api.js              # Base Axios instance with JWT interceptor
+│   │   │   ├── authService.js      # Auth API endpoints requests
+│   │   │   └── studentService.js   # Student CRUD API requests (uses FormData for images)
+│   │   ├── App.jsx                 # Client router mappings (React Router)
+│   │   ├── index.css               # Tailwind CSS imports
+│   │   └── main.jsx                # React app initializer
+│   ├── package.json
+│   └── tailwind.config.js          # UI configuration file
+│
+└── README.md                       # Installation and setup scripts guide

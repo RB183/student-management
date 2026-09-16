@@ -1,0 +1,91 @@
+Objective
+Build a Student Management System using the MERN Stack (MongoDB, Express.js, React.js, and Node.js).
+
+The application should allow an administrator to securely log in and manage student records through a professional dashboard.
+
+Tech Stack
+Frontend
+React.js
+React Router
+Axios
+Tailwind CSS / Bootstrap / Material UI (Your Choice)
+Backend
+Node.js
+Express.js
+Database
+MongoDB with Mongoose
+Authentication
+JWT Authentication
+Password hashing using bcrypt
+Functional Requirements
+1. Admin Login
+Create a professional and responsive login page.
+
+The login page should include:
+
+Email
+Password
+Input validation
+Invalid credentials handling
+JWT-based authentication
+Logout functionality
+2. Dashboard
+After successful login, redirect the admin to the dashboard.
+
+The dashboard should display:
+
+Welcome message
+Total Students
+Active Students
+Inactive Students
+Recently Added Students
+Use a clean, modern, and professional dashboard UI.
+
+3. Student Management
+The administrator should be able to:
+
+Add Student
+View Student List
+Edit Student Information
+Delete Student
+Student Information
+Each student record should contain:
+
+Student Profile Image (Upload)
+Full Name
+Email Address
+Phone Number
+Gender
+Date of Birth
+Course
+Address
+Status (Active / Inactive)
+Image Upload
+Upload student profile image
+Allow only JPG, JPEG, and PNG formats
+Maximum file size: 2 MB
+Display the uploaded image in the student list and edit page
+Student List
+Display all students in a professional table with the following columns:
+
+Profile Image
+Name
+Email
+Phone Number
+Course
+Status
+Actions (Edit & Delete)
+The list should also support:
+
+Search by Name
+Search by Email
+Filter by Course
+Filter by Status
+Form Validation
+Validate the following fields:
+
+Full Name (Required)
+Email (Required & Unique)
+Phone Number (Required)
+Course (Required)
+Submission Guidelines
