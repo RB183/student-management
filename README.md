@@ -4,7 +4,7 @@ A practical student management app for keeping student records, profiles, and ac
 
 ## Live App
 
-- **Frontend:** https://student-management-frontend-three-nu.vercel.app
+- **Frontend:** https://student-management-p.vercel.app
 - **Backend API:** https://backend-livid-kappa-qlu6p6x3dr.vercel.app
 
 The frontend is deployed from `student-management/frontend` and the API is deployed from `student-management/backend`.
